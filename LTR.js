@@ -2,7 +2,17 @@ $(document).ready(function(){
     
     // arrays for all questions of each subject
     const QEnglish = [
-        ""
+        // Metaphor
+        'What kind of figurative language is used in this sentence? "life is a box of chocolates, you never know what you are gonna get"',
+
+        // Edgar Allan Poe
+        'Who wrote "The Tell-Tale Heart"?',
+        
+        // Hamlet
+        'which shakespeare play is "The Lion King" inspired by',
+
+        //
+        ''
     ];
 
     const QMath = [
@@ -19,7 +29,10 @@ $(document).ready(function(){
         'What is 3/4 + 5/8 simplified?',
 
         // 7.43
-        'Add 4.75 and 2.68.'
+        'Add 4.75 and 2.68.',
+
+        // 126
+        'Find the area of a rectangle with a length of 18 cm and a width of 7 cm.'
     ];
 
     const QHistory = [
