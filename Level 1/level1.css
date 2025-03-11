@@ -1,0 +1,17 @@
+.front {
+    position: absolute;
+    top: 0;
+    left: -22.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
