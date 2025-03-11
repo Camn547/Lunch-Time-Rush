@@ -1,4 +1,4 @@
-.subjects {
+.difficult {
   width: 30%;
   height: 65%;
   position: absolute;
@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-evenly;
 }
-.subjects button {
+.difficult button {
   width: 90%;
   height: 14%;
   background-color: rgb(114, 42, 114);
@@ -26,5 +26,6 @@
   position: absolute;
   width: 60%;
   left: 20%;
+  top: 16%;
   text-align: center;
 }/*# sourceMappingURL=LTR.css.map */
