@@ -1,28 +1,14 @@
 $(document).ready(function(){
     
-    let difficulty;
     let milliseconds = 0;
     let seconds = 0;
     let minutes = 0;
-    let on = false;
 
-    $(".Easy").on('click', function(){
-        difficulty = "Easy"
-    })
 
-    $(".Medium").on('click', function(){
-        difficulty = "Medium"
-    })
-
-    $(".Hard").on('click', function(){
-        difficulty = "Hard"
-    })
-
-    if(on == true){
+    $("button").on("click", function(){
+        $(".ready").fadeOut(150)
         startTimer();
-    }else{
-        stopTimer();
-    }
+    })
 
     function startTimer() {
         interval = setInterval(function() {
