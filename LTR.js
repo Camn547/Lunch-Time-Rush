@@ -4,6 +4,8 @@ $(document).ready(function(){
     let milliseconds = 0;
     let seconds = 0;
     let minutes = 0;
+    let on = false;
+
     $(".Easy").on('click', function(){
         difficulty = "Easy"
     })
@@ -15,6 +17,12 @@ $(document).ready(function(){
     $(".Hard").on('click', function(){
         difficulty = "Hard"
     })
+
+    if(on == true){
+        startTimer();
+    }else{
+        stopTimer();
+    }
 
     function startTimer() {
         interval = setInterval(function() {
