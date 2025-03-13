@@ -19,33 +19,3 @@
 }
 
 
-.card1 {
-    position: absolute;
-    top: 10rem;
-    right: 20rem;
-}
-.card2 {
-    position: absolute;
-    top: 10rem;
-    right: 45rem;
-}
-.card3 {
-    position: absolute;
-    top: 10rem;
-    right: 70rem;
-}
-.card4 {
-    position: absolute;
-    top: 30rem;
-    right: 20rem;
-}
-.card5 {
-    position: absolute;
-    top: 30rem;
-    right: 45rem;
-}
-.card6 {
-    position: absolute;
-    top: 30rem;
-    right: 70rem;
-}
