@@ -12,7 +12,8 @@ $(document).ready(function(){
     })
 
     $(".kitty").on("click", function(){
-        $("img").fadeOut(2000);
+        $(this).delay(450).fadeOut(10).html("<img src='../images/DEADkitty.png' alt='deda kitty :('></img>")
+        $(".dead").html("<img src='../images/testparticles-ezgif.com-crop.gif' alt=''></img>").delay(1000).css("z-index","1").fadeOut(10)
     })
 
     function startScore(){

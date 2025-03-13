@@ -90,9 +90,31 @@
 .kitty {
   position: absolute;
   left: 40%;
-  top: 30%;
+  top: 28%;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
 }
 .kitty img {
-  width: 30%;
-  height: 30%;
+  width: 100%;
+  height: 100%;
+}
+.kitty h5 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  bottom: 0;
+}
+
+.dead {
+  position: absolute;
+  left: 40%;
+  top: 28%;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+}
+.dead img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=LTR.css.map */
