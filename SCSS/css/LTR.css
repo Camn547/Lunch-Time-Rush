@@ -39,13 +39,24 @@
 .timer {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 11%;
   height: 5%;
   width: 10%;
   background-color: violet;
   text-align: center;
   align-content: center;
   z-index: 0;
+}
+
+.score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5%;
+  width: 10%;
+  background-color: violet;
+  text-align: center;
+  align-content: center;
 }
 
 .ready {
@@ -74,4 +85,14 @@
   width: 80%;
   left: 10%;
   text-align: center;
+}
+
+.kitty {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+}
+.kitty img {
+  width: 30%;
+  height: 30%;
 }/*# sourceMappingURL=LTR.css.map */
