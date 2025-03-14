@@ -48,19 +48,8 @@
   z-index: 0;
 }
 
-.score {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 5%;
-  width: 10%;
-  background-color: violet;
-  text-align: center;
-  align-content: center;
-}
-
 .ready {
-  z-index: 2;
+  z-index: 5;
   position: absolute;
   top: 0;
   left: 0;
