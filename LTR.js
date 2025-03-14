@@ -3,7 +3,6 @@ $(document).ready(function(){
     let milliseconds = 0;
     let seconds = 0;
     let minutes = 0;
-    let score = 1000;
 
     $("button").on("click", function(){
         $(".ready").fadeOut(150)
@@ -16,12 +15,6 @@ $(document).ready(function(){
         $(".dead").html("<img src='../images/testparticles-ezgif.com-crop.gif' alt=''></img>").delay(1000).css("z-index","1").fadeOut(10)
     })
 
-    function startScore(){
-        interval2 = setInterval(function(){
-            score -= 1;
-            updateScore();
-        }, 75);
-    }
 
     function startTimer() {
         interval = setInterval(function() {
@@ -42,11 +35,6 @@ $(document).ready(function(){
         clearInterval(interval);
     }
 
-    function updateScore(){
-        let sc = score.toString().padStart("1000");
-
-        $(".score p").html(`Score: ${sc}`);
-    }
 
     function updateDisplay() {
         let ms = milliseconds.toString().padStart(2, "0");
@@ -56,6 +44,5 @@ $(document).ready(function(){
         $("h3").html(`Time: ${min}:${sec}:${ms}`);
     }
     updateDisplay();
-    updateScore();
 
 })
