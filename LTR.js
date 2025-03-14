@@ -31,10 +31,6 @@ $(document).ready(function(){
         }, 10);
     }
 
-    function stopTimer() {
-        clearInterval(interval);
-    }
-
 
     function updateDisplay() {
         let ms = milliseconds.toString().padStart(2, "0");
