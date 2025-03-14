@@ -5,13 +5,14 @@ $(document).ready(function(){
     //     $(".back").animate({width: "1px", marginLeft: "7rem"}, 1000)
     //     $(".front").delay(1000).animate({width: "30rem", marginLeft: "-7.5rem"}, 1000)
     // })
+    $(".celebrate").hide(1)
     const cards = [["8rem", "16rem"], ["8rem", "41rem"], ["8rem", "66rem"], ["28rem", "16rem"], ["28rem", "41rem"], ["28rem", "66rem"]]
 
+    var choice1;
+    var choice2;
+    var possible_match = 0
+    var match = 0
     var treats = 0
-    var cat = 0
-    var mouse = 0
-    var yarn = 0
-    match = 0
 
 
     var randomIndex = Math.floor(Math.random() * cards.length)
@@ -30,34 +31,34 @@ $(document).ready(function(){
     })
 
     $(".card").on("click", function(){
-        if ($(this).attr("id") == "cat"){
-            cat++
-            mouse = 0
-            yarn = 0
+        possible_match++
+        if (possible_match == 1){
+            choice1 = $(this).attr("id")
+            $(this).css('border','2px solid yellow')
         }
-        if ($(this).attr("id") == "mouse"){
-            mouse++
-            cat = 0
-            yarn = 0
+        else if (possible_match == 2){
+            choice2 = $(this).attr("id")
         }
-        if ($(this).attr("id") == "yarn"){
-            yarn++
-            cat = 0
-            mouse = 0
+        if (possible_match > 2){
+            possible_match = 1
         }
-        if (cat == 2){
+        if (choice1 == choice2){
             match++
             treats += 15
+            $("#"+choice1).remove()
+            $("#"+choice2).remove()
+            console.log(choice1, choice2, possible_match, match)
+
+            choice1 = undefined
+            choice2 = undefined        
+            possible_match=0 
+            $(".treatsCounter").html(`<h1>Treats: ${treats}</h1>`)
+            if (match == 3) {
+                $(".celebrate").show(1)
+            }
+            $(this).addClass("hue-rotate")
         }
-        if (mouse == 2){
-            match++
-            treats += 15
-        }
-        if (yarn == 2){
-            match++
-            treats += 15
-        }
-        console.log(cat, mouse, yarn, match, treats)
     })
+
 })
 
