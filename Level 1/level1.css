@@ -8,21 +8,13 @@
     width: 1px;
     margin-left: 7rem;
 }
-
+.lol{
+    pointer-events: none;
+}
 .back {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.celebrate {
-    font-size: 10rem;
-    width: 100vw;
-    height: 96vh;
     display: flex;
     justify-content: center;
     align-items: center;

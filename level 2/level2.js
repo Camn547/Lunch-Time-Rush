@@ -1,10 +1,11 @@
 $(document).ready(function(){
-    // $(".front").hide(1)
-    // $(".back").on("click", function(){
-    //     $(".front").show(1)
-    //     $(".back").animate({width: "1px", marginLeft: "7rem"}, 1000)
-    //     $(".front").delay(1000).animate({width: "30rem", marginLeft: "-7.5rem"}, 1000)
-    // })
+    $(".front").hide(1)
+    $(".back").on("click", function(){
+        $(".front").show(1)
+        $(".back").animate({width: "1px", marginLeft: "7rem"}, 1000)
+        $(".front").delay(1000).animate({width: "30rem", marginLeft: "-7.5rem"}, 1000)
+    })
+    
     $(".celebrate").hide(1)
     const cards = [["10rem", "6rem"], ["10rem", "20rem"], ["10rem", "34rem"], ["10rem", "48rem"], ["10rem", "62rem"], ["10rem", "76rem"], ["26rem","6rem"], ["26rem","20rem"], ["26rem","34rem"], ["26rem","48rem"], ["26rem","62rem"], ["26rem","76rem"]]
 
