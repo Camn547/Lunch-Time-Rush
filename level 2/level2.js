@@ -7,7 +7,7 @@ $(document).ready(function(){
     })
     
     $(".celebrate").hide(1)
-    const cards = [["10rem", "6rem"], ["10rem", "20rem"], ["10rem", "34rem"], ["10rem", "48rem"], ["10rem", "62rem"], ["10rem", "76rem"], ["26rem","6rem"], ["26rem","20rem"], ["26rem","34rem"], ["26rem","48rem"], ["26rem","62rem"], ["26rem","76rem"]]
+    const cards = [["6rem", "5rem"], ["6rem", "21rem"], ["6rem", "37rem"], ["6rem", "53rem"], ["6rem", "69rem"], ["6rem", "85rem"], ["25rem","5rem"], ["25rem","21rem"], ["25rem","37rem"], ["25rem","53rem"], ["25rem","69rem"], ["25rem","85rem"]]
 
     var choice1;
     var choice2;
@@ -37,9 +37,9 @@ $(document).ready(function(){
 
     $(".card").on("click", function(){
         possible_match++
+        $(this).addClass("lol")
         if (possible_match == 1){
             choice1 = $(this).attr("id")
-            $(this).css('border','2px solid yellow')
         }
         else if (possible_match == 2){
             choice2 = $(this).attr("id")
@@ -62,12 +62,12 @@ $(document).ready(function(){
                 $(".celebrate").show(1);
                 stopTimer();
             }
-            $(this).addClass("hue-rotate")
         }
         if (possible_match == 2 && choice1 != choice2) {
             possible_match = 0
             choice1 = undefined
             choice2 = undefined
+            $(".card").removeClass("lol")
         }
     })
 

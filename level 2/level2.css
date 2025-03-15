@@ -20,11 +20,8 @@
     align-items: center;
 }
 .card img{
-    width: 300px;
-    height: 300px;
-}
-.card{
-    perspective: none;
+    width: 230px;
+    height: 230px;
 }
 #game{
     width: 90%;

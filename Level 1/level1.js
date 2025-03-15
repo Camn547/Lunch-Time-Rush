@@ -6,16 +6,21 @@ $(document).ready(function(){
     //     $(".front").delay(1000).animate({width: "30rem", marginLeft: "-7.5rem"}, 1000)
     // })
 
-    $(".card").delay(6000).animate({width: "1px", marginLeft: "7rem"}, 1000)
+    // $(".card img").delay(1000).animate({width: "0px", height: "300px", marginRight: "9rem"},300).delay(100).animate({width: "300px", marginRight: "0"},400)
+
+    $(".card img").css({transform: "rotateY(90deg)",transition: "transform 1s"}).delay(1500).queue(function(){
+        $(".card img").attr("src","../Images/BACK.jpg").css({transform: "rotateY(180deg)",transition: "transform 1s"})
+    })
 
     $(".celebrate").hide(1)
-    const cards = [["8rem", "16rem"], ["8rem", "41rem"], ["8rem", "66rem"], ["28rem", "16rem"], ["28rem", "41rem"], ["28rem", "66rem"]]
+    const cards = [["2rem", "12rem"], ["2rem", "43rem"], ["2rem", "76rem"], ["28rem", "12rem"], ["28rem", "43rem"], ["28rem", "76rem"]]
 
     var choice1;
     var choice2;
     var possible_match = 0
     var match = 0
     var treats = 0
+
 
 
     var randomIndex = Math.floor(Math.random() * cards.length)
@@ -42,7 +47,6 @@ $(document).ready(function(){
         $(this).addClass("lol")
         if (possible_match == 1){
             choice1 = $(this).attr("id")
-            $(this).css('border','2px solid yellow')
         }
         else if (possible_match == 2){
             choice2 = $(this).attr("id")
@@ -65,7 +69,6 @@ $(document).ready(function(){
                 $(".celebrate").show(1)
                 stopTimer();
             }
-            $(this).addClass("hue-rotate")
         }
         if (possible_match == 2 && choice1 != choice2) {
             possible_match = 0

@@ -4,6 +4,8 @@ $(document).ready(function(){
     let seconds = 0;
     let minutes = 0;
 
+
+
     $("button").on("click", function(){
         $(".ready").fadeOut(150)
         startTimer();
