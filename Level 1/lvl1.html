@@ -6,17 +6,18 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Memory Card Game</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./SCSS/css/LTR.css">
+    <link rel="stylesheet" href="./lvl1.css">
+    <link rel="stylesheet" href="../SCSS/css/LTR.css">
 </head>
-<body class=" bg-[url(./Images/backyardlevel.jpg)] bg-cover bg-no-repeat">
+<body class=" bg-[url(../Images/backyardlevel.jpg)] bg-cover bg-no-repeat">
 
     <div class="ready">
         <p class="text-9xl">Easy Mode</p>
         <button class="text-7xl">Ready?</button>
         <div class="kitty">
-            <img src="./Images/Walking1.png" alt="" class="">
+            <img src="../Images/Walking1.png" alt="" class="">
         </div>
+        <div class="dead"></div>
 
     </div>
 
@@ -29,17 +30,15 @@
         <div class="deck"></div>
     </div>
 
-    <div class="treats">
-        <h1>Treats: 0</h1>
-    </div>
 
     <div class="celebrate">
-        <h1>WOW! You did it! Great job. Now, onto medium!</h1>
+        <h1 class="text-7xl">WOW! You did it! Great job. Now, onto medium!</h1>
+        <a href="../index.html"><button class="home text-4xl">Home</button></a>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./test.JS"></script>
-    <script src="./LTR.js"></script>
+    <script src="./lvl1.JS"></script>
+    <script src="../LTR.js"></script>
 
 </body>
 </html>

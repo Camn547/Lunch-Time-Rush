@@ -4,7 +4,6 @@ $(document).ready(function() {
     const $reset = $('.reset-button');
     const $movesCounter = $('.move');
     const $timerDisplay = $('.time');
-    const $treatDisplay = $('.treats');
     $(".celebrate").hide(1)
 
     // Initialize game variables
@@ -17,12 +16,12 @@ $(document).ready(function() {
 
     // Array of background images (two of each image URL)
     const cardImages = shuffle([
-        "url('./Images/berd.webp')",
-        "url('./Images/berd.webp')",
-        "url('./Images/kitchen.png')",
-        "url('./Images/kitchen.png')",
-        "url('./Images/image.png')",
-        "url('./Images/image.png')",
+        "url('../Images/berd.webp')",
+        "url('../Images/berd.webp')",
+        "url('../Images/kitchen.png')",
+        "url('../Images/kitchen.png')",
+        "url('../Images/image.png')",
+        "url('../Images/image.png')",
     ]);
 
     // Shuffle function
@@ -95,7 +94,6 @@ $(document).ready(function() {
 
         if (cardsFlipped[0].data('image') === cardsFlipped[1].data('image')) {
             matchCount++;
-            $treatDisplay.text(`Treats: ${matchCount}`)
             cardsFlipped.forEach($card => $card.addClass('matched'));
             if (matchCount * 2 === cardImages.length) {
                 setTimeout(gameOver, 500);
