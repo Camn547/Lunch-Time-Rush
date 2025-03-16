@@ -29,6 +29,17 @@ $(document).ready(function(){
         clearInterval(interval);
     }
 
+    function flipTS(card) {
+        $(card).find("img").css({
+            transform: "rotateY(90deg)",
+            transition: "transform 1s"
+        }).delay(1500).queue(function() {
+            $(this).attr("src", "../Images/kitchen.png").css({
+                transform: "rotateY(180deg)",
+                transition: "transform 1s"
+            }).dequeue();
+        });
+    }
 
     $("#game img").each(function(index, element) {
         console.log(randomIndex)
@@ -45,6 +56,7 @@ $(document).ready(function(){
     $(".card").on("click", function(){
         possible_match++
         $(this).addClass("lol")
+        flipTS(this)
         if (possible_match == 1){
             choice1 = $(this).attr("id")
         }
@@ -79,4 +91,3 @@ $(document).ready(function(){
     })
 
 })
-
